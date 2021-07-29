@@ -1,0 +1,43 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title> </ion-title>
+    <ion-buttons slot="end">
+      <ion-button routerLink="/tabs/categories" color="light"> SKIP </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <div class="ion-text-center">
+    <p style="font-size: 18px; font-weight: bold" color="light">
+      Pick categories to follow
+    </p>
+    <p>You can change or add them later.</p>
+  </div>
+
+  <div class="images">
+    <div
+      *ngFor="let item of images;let i =index"
+      class="image"
+      style="position: relative"
+      (click)="selecte(i)"
+    >
+      <img [src]="item.image" />
+      <div class="overlay" [ngClass]="{'active': selected.includes(i) }">
+        <div
+          style="
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            font-weight: bold;
+          "
+        >
+          {{item.text}}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <ion-button expand="block" color="danger"> SIGN UP </ion-button>
+</ion-content>

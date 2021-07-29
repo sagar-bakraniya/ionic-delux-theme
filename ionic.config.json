@@ -1,0 +1,7 @@
+{
+  "name": "deluxe",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

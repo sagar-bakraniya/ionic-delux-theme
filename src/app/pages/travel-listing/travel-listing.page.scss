@@ -1,0 +1,8 @@
+@import '../../../assets/scss/mixin';
+
+
+.explore-button {
+    @include button(var(--ion-color-primary));
+    width: 100px;
+    height: 40px;
+}

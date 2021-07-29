@@ -1,0 +1,30 @@
+@import '../../../assets/scss/_mixin.scss';
+
+.image-container {
+  position: relative;
+  margin: 0;
+  .text-container {
+    position: absolute;
+    top: 0;
+    bottom: 5px;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+  }
+  .travel {
+    @include button(#879aa1);
+  }
+  .food {
+    @include button(#80911a);
+  }
+  .travel {
+    @include button(#87101a);
+  }
+  .fashon {
+    @include button(#ac9c8c);
+  }
+}
